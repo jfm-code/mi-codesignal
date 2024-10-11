@@ -1,9 +1,7 @@
 # NOTES
 
-## Complexity Analysis
+## Complexity Analysis & Optimization
 - it's a way of determining how input size affect the performance of the program, in terms of time and space
-
-## Optimization
 - maths formulas can play a large role in reducing the complexity, the hard thing is that, what kind of formula
 
 **Example 1**: to calculate the sum from 1 to n, we can use a for-loop like this
@@ -41,4 +39,45 @@ def contains_duplicate(lst):
             return True
     return False
 # complexity = O(nlogn)
+```
+
+## Set Methods
+- based on discrete maths
+- using set methods are really fast, good for optimization
+- before apply the set methods below, make sure to convert the data to set type first by doing ```set()```
+1. Intersection (```&```):
+```
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+union_set = set1 & set2
+print(union_set)  # prints: {3, 4}
+```
+2. Union (```|```):
+```
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+union_set = set1 | set2
+print(union_set)  # prints: {1, 2, 3, 4, 5, 6}
+```
+3. Difference (```-```):
+```
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+diff_set = set1 - set2
+print(diff_set)  # prints: {1, 2}
+```
+4. Symmetric Difference (```^```):
+```
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+sym_diff_set = set1 ^ set2
+print(sym_diff_set)  # prints: {1, 2, 5, 6}
+# output elements that only reside in one of the sets, not both
+```
+5. Subset (```<=```):
+```
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+print(set1 <= set2)  
+# prints: True, cause set1 is a subset of set 2
 ```
