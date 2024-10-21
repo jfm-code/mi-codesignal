@@ -44,6 +44,8 @@ def contains_duplicate(lst):
 ## Set Methods
 - based on discrete maths
 - using set methods are really fast, good for optimization
+- to initialize a set: ```unique = set()```
+- to add element in a set: ```unique.add(2)```
 - before apply the set methods below, make sure to convert the data to set type first by doing ```set()```
 1. Intersection (```&```):
 ```
