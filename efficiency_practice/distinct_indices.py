@@ -21,6 +21,7 @@ def brute_force_solution(arrA, arrB):
 # If the differences are opposite numbers (like -2 and 2) then those 4 numbers are the solution
 
 def optimized_solution(arrA, arrB):
+    result = []
     hashmap = {}
     for i in range(len(arrA)):
         diff = arrA[i] - arrB[i]
@@ -28,10 +29,12 @@ def optimized_solution(arrA, arrB):
             if diff not in hashmap:
                 hashmap[diff] = i
         else:
-            return [hashmap[-(diff)], i]
+            result.append([hashmap[-(diff)], i])
+    return sorted(result)[0] # sort and return the pair with minimum i and j
 
-
-A = [1, 2, 3, 4]
-B = [2, 1, 1, 4]
-print("Initial solution:", brute_force_solution(A, B))
-print("Initial solution:", optimized_solution(A, B))
+# A1 = [1, 2, 3, 4]
+# B1 = [2, 1, 1, 4]
+A2 = [0, 1, 2, 3, 4, 5, 6]
+B2 = [7, 7, 6, 5, 7, 3, 2]
+print("Initial solution:", brute_force_solution(A2, B2))
+print("Initial solution:", optimized_solution(A2, B2))
